@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url("../img/fondo.jpg");
+    background-size: cover;
+}
+
+section{
+    width: 90%;
+    height: 750px;
+    margin: 120px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.cont-botones{
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+    border: 4px solid aquamarine;
+}
+
+.cont-figura{
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+    border: 4px solid aquamarine;
+}
+
+h2{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.cont-botones button{
+    background: #ffffff;
+    color: black;
+    padding: 12px 30px;
+    border: 1px solid aquamarine;
+    margin: 10px;
+    transition: .5s;
+    cursor:pointer;
+    border-radius: 20px;
+}
+
+.cont-botones button:hover{
+    transform: scale(1.2);
+    background: #d7e4a8;
+    color: #000000;
+}
+
+.cont-figura #figura{
+    width: 220px;
+    height: 220px;
+    background: #d7e4a8;
+    margin: 40px auto;
+    transition: 1s;
+}
+
+#figura.circulo{
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#figura.rectangulo{
+    width: 400px;
+    height: 220px;
+    margin: 40px auto;
+    transition: 1s;
+}
+
+#figura.degrade{
+    border-radius: 50%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,98,9,1) 35%, rgba(202,215,5,1) 100%);
+    transition: 1s;
+}
+
+#figura.gif{
+    background: url("../img/gif.gif") ;
+    width: 500px;
+    height: 350px;
+}
+
+#figura.arriba{
+    transform: translateY(-100px);
+}
+
+#figura.abajo{
+    transform: translateY(100px);
+}
+
+#figura.izquierda{
+    transform: translateX(-100px);
+}
+
+#figura.derecha{
+    transform: translateX(100px);
+}
+
+#figura.diagonal{
+    transform: translateX(100px) translateY(100px);
+}
+
+#figura.animacion{
+    border-radius: 50%;
+    animation: ondas 3s infinite;
+
+}
+
+@keyframes ondas{
+    0%{
+        transform: scale(0);
+    }
+
+    25%{
+        transform: scale(1.2);
+        background: url("../img/transicion1.jpg");
+        background-size: 130%;
+    }
+
+    40%{
+        transform: scale(1.3);
+        background: url("../img/transicion2.jpg");
+        background-size: 100%;
+
+    }
+
+    60%{
+        transform: scale(1.5);
+        background: url("../img/transicion3.jpg");
+        background-size: 70%;
+    }
+
+    75%{
+        transform: scale(1.3);
+        background: url("../img/transicion2.jpg");
+        background-size: 100%;
+    }
+
+    90%{
+        transform: scale(1.2);
+        background: url("../img/transicion1.jpg");
+        background-size: 150%;
+    }
+
+    100%{
+        transform: scale(0);
+    }
+}
+
+.panel{
+    position: absolute;
+    top: 0;
+    left: -500px;
+    width: 400px;
+    height: 120vh;
+    background: #000000;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 50px;
+    z-index: 999;
+    transition: 1s;
+}
+
+.panel a{
+    display: block;
+    width: 30%;
+    border-radius: 5%;
+    padding: 10px 30px;
+    margin: 24px 0;
+    background: #ffffff;
+    color: #000000;
+    
+}
+
+.panel.active{
+    left: 0;
+}
+
+#modal{
+    width: 100%;
+    height: 120vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00000075;
+    display: none;
+}
+
+.cont-login{
+    padding: 50px 120px;
+    background: #dabe63;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.cont-login input{
+    display: block;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 10px auto;
+}
+
+.cont-login button{
+    background: #000000;
+    color: #ffffff;
+    padding: 10px 40px;
+}
+
+#cerrar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    color: rgb(252, 29, 0);
+    font-size: 20px;
+    border: transparent;
+}
+
+#modal.activo{
+    display: flex;
+}

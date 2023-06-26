@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Styles.css">
+</head>
+<body>
+    <section>
+        <div class="cont-botones">
+            <h2>BOTONES DE INTERACCION</h2>
+            <button onclick="circulo()">CIRCULO</button>
+            <button onclick="rectangulo()">RECTANGULO</button>
+            <button onclick="degrade()">DEGRADADO</button>
+            <button onclick="gif()">GIF</button>
+            <button onclick="arriba()">ARRIBA</button>
+            <button onclick="abajo()">ABAJO</button>
+            <button onclick="izquierda()">IZQUIERDA</button>
+            <button onclick="derecha()">DERECHA</button>
+            <button onclick="diagonal()">DIAGONAL</button>
+            <button onclick="animacion()">ANIMATION ONDAS</button>
+            <button onclick="panel()">PANEL LATERAL</button>
+            <button onclick="login()">MODAL LOGIN</button>
+            
+        </div>
+        <div class="cont-figura">
+            <h2>FIGURA</h2>
+            <div id="figura"></div>
+        </div>
+    </section>
+    <div class="panel">
+        <h2>MENU PRINCIPAL</h2>
+        <a href="#">Home</a>
+        <a href="#">Quienes Somos</a>
+        <a href="#">Productos</a>
+        <a href="#">Contactos</a>
+    </div>
+
+    <div id="modal">
+        <div class="cont-login">
+            <h2>Iniciar Sesion</h2>
+            <button id="cerrar" onclick="login()">X</button>
+            <form action="#">
+                <input type="email" placeholder="Usuario">
+                <input type="password" placeholder="****">
+                <button>Ingresar</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="js/Main.js"></script>
+</body>
+</html>
